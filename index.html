@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+<hr>
+    <h1 class="mt-3" id="expense">Get Your Budget</h1>
+    <hr>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 ">
+        <div class="budget p-5">
+            <center>
+            <h2 class="fs-3 text-light mb-3 " id="totalBudget" >Total Budget : 0 </h2>
+            <h2 class="fs-3 text-light mb-3" id="currentBalance" >Current Balance : 0 </h2>
+
+            <h2 class=" text-light mb-4" ><b>Add money to budget</b></h2>
+            <form action="">
+            <div class="mb-3">
+            <input  class="form-control  w-100 rounded-pill text-center"  type="text"  placeholder="Add money" id="money"></div>
+            <div class="mb-3">
+            <button  class=" btn btn-secondary  text-center text-light rounded-pill form-control w-100 " onclick="addMoney()" id="addmoney" type="button" >Add Money</button></div>
+
+        
+
+
+        <h2 class=" text-light mt-3" ><b>Add Expenses</b></h2>
+        <div class="mb-3">
+        <input  class="form-control  w-100  rounded-pill text-center " type="text" placeholder="Expense name" onkeydown="return /[a-zA-Z]/i.test(event.key)" id="expenseName"></div>
+        <div class="mb-3">
+        <input class="form-control  w-100 rounded-pill text-center " type="number" placeholder="Add expense" id="expenseAmount"></div>
+   
+        <button type="button" onclick="addExpense()" class="form-control w-100 text-center text-light rounded-pill btn btn-secondary"  id="addexpense">Add Expense</button>
+    
+    <button type="button"  onclick="logout()" id="button" class="btn btn-warning   mt-5 rounded-pill">Logout</button>
+    
+    </form></center>
+        </div>
+    </div>
+    <div class="col-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 mt-3">
+        
+            <h1 class="text-center" style=" font-family: 'Bodoni Moda', serif; ">Added Expenses</h1>
+            
+            <div class="text-dark" id="addedExpenses"> </div>
+        </div>
+        <div class="col-4"></div>
+  
+    </div>
+
+    <script src="./expense.js">
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+
+
+  </head>
+<body>
+
+
+<div class="login-box">
+    
+ <div class="icon">  <i class="fa-regular fa-user "></i></div> 
+
+    <form>
+      <div class="user-box">
+        <input type="text" id="username" name="" required="">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" id="password" name="" required="">
+        <label>Password</label>
+      </div>
+<div>
+      <button  type="button" onclick="login()" class="btn btn-outline-secondary mt-3">Verify credentials</button></div>
+
+<p class="text-white mt-3"  style="font-size: 40px;font-family: 'Emilys Candy', cursive;" id="para"></p>
+      <a href="./index.html" >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+       LOGIN
+      </a>
+      
+
+    </form>
+  </div>
+
+  <script>
+
+    function login(){
+user_name = username.value;
+passwd = password.value;
+
+
+var user ={
+
+  USERNAME :    user_name,
+  PASSWORD : passwd
+}
+
+localStorage.setItem(user_name,JSON.stringify(user));
+
+data = JSON.parse(localStorage.getItem(user_name));
+console.log(data);
+
+       localStorage.setItem("Welcome",data.USERNAME);
+
+       
+var name=localStorage.getItem('Welcome');
+       console.log(name);
+    para.innerHTML = `Welcome ${name}`;
+
+       }
+
+  </script>
+
+
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,24 @@
+body{
+    background: url("https://img.freepik.com/free-photo/top-view-finance-business-elements_23-2148793757.jpg?w=2000");
+    color:white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+#expense{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Mynerve', cursive;
+}
+
+
+.budget{
+ 
+    box-shadow:13px 29px 79px -1px rgba(13, 13, 14, 0.555) ;
+    background: transparent;
+    background-color:black;
+    background: linear-gradient(1200deg,rgba(15, 12, 12, 0.719),rgba(27, 27, 25, 0.774));
+    border-radius: 100px;
+
+}
